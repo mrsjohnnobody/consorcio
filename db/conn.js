@@ -12,11 +12,12 @@ const sequelize = new Sequelize(
 );
 
 try {
-  sequelize.authenticate;
-  sequelize.sync({
-    //force: true,
-    alter: true,
-  })();
+  sequelize.authenticate(
+    sequelize.sync({
+      //force: true,
+      alter: true,
+    })
+  );
   console.log("Sequelize connected");
 } catch (err) {
   console.log("Não foi possível conectar ao Sequelize: ", err);
