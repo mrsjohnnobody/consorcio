@@ -3,11 +3,5 @@
 # dependencies
 node_modules
 
-#db config
-db/conn.js
-
-#uploads
-uploads
-
 #env
 .env
