@@ -1,62 +1,63 @@
-:root{
-    --primary-color: #2196F3; 
-    --secondary-color: #002E69;
-    --text-white-color: white;
-    --text-black-color: #202020;
-    --grey-color: #e9e9e9;
-    --background-color: white;
+:root {
+  --primary-color: #2196f3;
+  --secondary-color: #002e69;
+  --success-color: #198754;
+  --success-secondary-color: #75b798;
+  --text-white-color: white;
+  --text-black-color: #202020;
+  --grey-color: #e9e9e9;
+  --background-color: white;
 }
 
 .dark-mode:root {
-    --primary-color: black;
-    --secondary-color: black;
-    --text-white-color: white;
-    --text-black-color: white;
-    --grey-color: black;
-    --background-color: black;
+  --primary-color: black;
+  --secondary-color: black;
+  --text-white-color: white;
+  --text-black-color: white;
+  --grey-color: black;
+  --background-color: black;
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-black-color);
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-black-color);
 }
 
 /* Works on Firefox */
 * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--secondary-color) var(--primary-color);
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) var(--primary-color);
 }
-  
+
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-width: 8px;
+  width: 8px;
 }
-  
+
 *::-webkit-scrollbar-track {
-    background: var(--primary-color);
+  background: var(--primary-color);
 }
-  
+
 *::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-color);
-    border-radius: 20px;
-    border: 0px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  border: 0px;
 }
 
 #footerLinks .list-unstyled li a {
-    font-weight: 350;
-    text-decoration: none;
+  font-weight: 350;
+  text-decoration: none;
 }
 
 #footerLinks .list-unstyled li a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 footer {
-    background-color: var(--primary-color);
+  background-color: var(--success-color);
 }
 
-#headerDiv{
-    background-color: var(--primary-color);
+#headerDiv {
+  background-color: var(--success-color);
 }
-

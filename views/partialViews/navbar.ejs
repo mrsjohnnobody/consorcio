@@ -1,108 +1,322 @@
-<nav class="navbar navbar-expand-lg navbar-dark pb-0 sticky-top navbarUser" bg-light
-  style="background-color: #002e69; width: 100%">
+<nav
+  class="navbar navbar-expand-lg navbar-dark pb-0 sticky-top navbarUser"
+  bg-light
+  style="background-color: #0f5132; width: 100%"
+>
   <div class="container">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-collapse collapse navbar-expand-md" id="navbarNavDropdown">
+    <div
+      class="navbar-collapse collapse navbar-expand-md"
+      id="navbarNavDropdown"
+    >
       <ul class="navbar-nav nav-fill w-100 d-flex justify-content-center">
-        <li class="dropdown <% if(activeNavItem.includes('Inicio')) {%> activeNavItem <% }%>">
-          <a id="homelogo" class="nav-link" href="/" style="color: white"><img src="/icons/house-door-fill.svg"
-              alt="Inicio" /></a>
+        <li
+          class="dropdown <% if(activeNavItem.includes('Inicio')) {%> activeNavItem <% }%>"
+        >
+          <a id="homelogo" class="nav-link" href="/" style="color: white"
+            ><img src="/icons/house-door-fill.svg" alt="Inicio"
+          /></a>
         </li>
-
-        <li class="dropdown <% if(activeNavItem.includes('Institucional')) {%> activeNavItem <% }%>">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
+        <li
+          class="dropdown <% if(activeNavItem.includes('Institucional')) {%> activeNavItem <% }%>"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDarkDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: white"
+          >
             &nbsp;INSTITUCIONAL
           </a>
-          <ul class="dropdown-menu dropdown-menu-ligth" aria-labelledby="navbarDarkDropdownMenuLink">
+          <ul
+            class="dropdown-menu dropdown-menu-ligth"
+            aria-labelledby="navbarDarkDropdownMenuLink"
+          >
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Camara')) {%> activeNavSubItem <% }%>"
-                href="/user/camara">Informações sobre a Câmara</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Camara')) {%> activeNavSubItem <% }%>"
+                href="/camara"
+                >Dados do Consórcio</a
+              >
             </li>
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Ouvidoria')) {%> activeNavSubItem <% }%>"
-                href="/user/ouvidoria">Ouvidoria</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Ouvidoria')) {%> activeNavSubItem <% }%>"
+                href="/"
+                >Estrutura Organizacional</a
+              >
             </li>
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Esic')) {%> activeNavSubItem <% }%>"
-                href="/user/eSic">E-SIC</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Esic')) {%> activeNavSubItem <% }%>"
+                href="/"
+                >Contratos de Programa</a
+              >
             </li>
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Regimento')) {%> activeNavSubItem <% }%>"
-                href="/user/regimento">Regimento Interno</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Regimento')) {%> activeNavSubItem <% }%>"
+                href="/regimento"
+                >Contratos de Rateio</a
+              >
             </li>
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('LeiOrganica')) {%> activeNavSubItem <% }%>"
-                href="/user/leiOrganica">Lei Orgânica</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('LeiOrganica')) {%> activeNavSubItem <% }%>"
+                href="/leiOrganica"
+                >Atas</a
+              >
             </li>
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Dicionario')) {%> activeNavSubItem <% }%>"
-                href="/user/dicionario">Dicionário Legislativo</a>
-            </li>
-            <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('InfoParlamentar')) {%> activeNavSubItem <% }%>"
-                href="/user/infoParlamentar">Papel do Vereador</a>
-            </li>
-            <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('InfoCâmara')) {%> activeNavSubItem <% }%>"
-                href="/user/infoCamara">Papel da Câmara</a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="dropdown <% if(activeNavItem.includes('Parlamentares')) {%> activeNavItem <% }%>">
-          <a class="nav-link" href="/user/parlamentar" style="color: white">&nbsp;PARLAMENTARES</a>
-        </li>
-        <li class="dropdown <% if(activeNavItem.includes('Legislativo')) {%> activeNavItem <% }%>">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
-            &nbsp;LEGISLATIVO
-          </a>
-          <ul class="dropdown-menu dropdown-menu-ligth" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Historico')) {%> activeNavSubItem <% }%>"
-                href="/user/historicOfParlamentares">Histórico de Parlamentares</a>
-            </li>
-            <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('MesaDiretora')) {%> activeNavSubItem <% }%>"
-                href="/user/mesadiretora">Mesa Diretora</a>
-            </li>
-            <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Comissoes')) {%> activeNavSubItem <% }%>"
-                href="/user/commission">Comissões</a>
-            </li>
-            <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
-                href="/user/sessoes">Sessões</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Dicionario')) {%> activeNavSubItem <% }%>"
+                href="/"
+                >Normal Operacional Básica do SUS</a
+              >
             </li>
           </ul>
         </li>
-        <li class="dropdown <% if(activeNavItem.includes('Transparencia')) {%> activeNavItem <% }%>">
-          <a class="nav-link" href="/user/transparencia" style="color: white">&nbsp;TRANSPARÊNCIA</a>
-        </li>
-        <li class="dropdown <% if(activeNavItem.includes('GestaoFiscal')) {%> activeNavItem <% }%>">
-          <a class="nav-link" href="/user/gestaofiscal" style="color: white">
-            &nbsp;GESTÃO FISCAL
+        <li
+          class="dropdown <% if(activeNavItem.includes('Legislativo')) {%> activeNavItem <% }%>"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDarkDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: white"
+          >
+            &nbsp;ENTES CONSÓRCIADOS
           </a>
-        </li>
-        <li class="dropdown <% if(activeNavItem.includes('Publicacoes')) {%> activeNavItem <% }%>">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false" style="color: white">
-            &nbsp;PUBLICAÇÕES
-          </a>
-          <ul class="dropdown-menu dropdown-menu-ligth" aria-labelledby="navbarDarkDropdownMenuLink">
+          <ul
+            class="dropdown-menu dropdown-menu-ligth"
+            aria-labelledby="navbarDarkDropdownMenuLink"
+          >
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Noticias')) {%> activeNavSubItem <% }%>"
-                href="/user/news">Noticias</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Historico')) {%> activeNavSubItem <% }%>"
+                href="/entes/1"
+                >Ararendá</a
+              >
             </li>
             <li>
-              <a class="dropdown-item <% if(activeNavItem.includes('Videos')) {%> activeNavSubItem <% }%>"
-                href="/user/videos">Vídeos</a>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('MesaDiretora')) {%> activeNavSubItem <% }%>"
+                href="/entes/2"
+                >Crateús</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Comissoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/3"
+                >Independência</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/4"
+                >Ipaporanga</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/5"
+                >Ipueiras</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/5"
+                >Monsenhor Tabosa</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/5"
+                >Nova Russas</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/5"
+                >Novo Oriente</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/5"
+                >Poranga</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/5"
+                >Quiterianópolis</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/entes/5"
+                >Tamboril</a
+              >
             </li>
           </ul>
+        </li>
+        <li
+          class="dropdown <% if(activeNavItem.includes('Legislativo')) {%> activeNavItem <% }%>"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDarkDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: white"
+          >
+            &nbsp;POLOS
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-ligth"
+            aria-labelledby="navbarDarkDropdownMenuLink"
+          >
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Historico')) {%> activeNavSubItem <% }%>"
+                href="/polos/1"
+                >Centro de Especialidades Odontológicas</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('MesaDiretora')) {%> activeNavSubItem <% }%>"
+                href="/polos/2"
+                >Consórcio Público de Saúde da Microregião de Crateús</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Comissoes')) {%> activeNavSubItem <% }%>"
+                href="/polos/3"
+                >Consórcio Público de Saúde da Microrregião de Crateús</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/polos/4"
+                >Consórcio Público de Saúde da Microrregião de Crateús -
+                CPSMCR</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/polos/5"
+                >Policlínica Raimundo Soares Resende</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li
+          class="dropdown <% if(activeNavItem.includes('Transparencia')) {%> activeNavItem <% }%>"
+        >
+          <a class="nav-link" href="/transparencia" style="color: white"
+            >&nbsp;TRANSPARÊNCIA</a
+          >
+        </li>
+        <li
+          class="dropdown <% if(activeNavItem.includes('Legislativo')) {%> activeNavItem <% }%>"
+        >
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDarkDropdownMenuLink"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            style="color: white"
+          >
+            &nbsp;LRF E CONTAS PÚBLICAS
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-ligth"
+            aria-labelledby="navbarDarkDropdownMenuLink"
+          >
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Historico')) {%> activeNavSubItem <% }%>"
+                href="/ldo"
+                >LDO - Lei de Diretrizes Orçamentária</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('MesaDiretora')) {%> activeNavSubItem <% }%>"
+                href="/loa"
+                >LOA - Lei Orçamentaria Anual</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Comissoes')) {%> activeNavSubItem <% }%>"
+                href="/pcg"
+                >PCG - Prestação de Contas de Governo</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/pcs"
+                >PCS - Prestação de Contas de Gestão</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/rgf"
+                >RGF - Relatório de Gestão Fiscal</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item <% if(activeNavItem.includes('Sessoes')) {%> activeNavSubItem <% }%>"
+                href="/rreo"
+                >RREO - Relatório Resumido da Execução Orçamentária</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li
+          class="dropdown <% if(activeNavItem.includes('Editais')) {%> activeNavItem <% }%>"
+        >
+          <a class="nav-link" href="/editais" style="color: white"
+            >&nbsp;EDITAIS</a
+          >
         </li>
       </ul>
     </div>
@@ -111,22 +325,22 @@
 
 <style>
   nav .navbar-nav li a:hover {
-    background-color: #2196f3;
+    background-color: #75b798;
     border-radius: 5px 5px 0 0;
     color: white;
   }
 
   nav.navbarUser {
-    border-bottom: 7px solid #2196f3;
+    border-bottom: 7px solid #75b798;
   }
 
   .activeNavItem {
-    background-color: #2196f3;
+    background-color: #75b798;
     border-radius: 5px 5px 0 0;
   }
 
   .activeNavSubItem {
-    background-color: #2196f3;
+    background-color: #75b798;
     color: white;
   }
 </style>
