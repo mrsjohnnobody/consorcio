@@ -42,7 +42,7 @@ class HomeController {
         limit: 8,
       });
 
-      res.render("/home/homePage", {
+      res.render("user/home/homePage", {
         videos,
         latestnews,
         gestoesFiscais,
